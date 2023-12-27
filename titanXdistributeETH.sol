@@ -7,9 +7,9 @@ interface ITITANX {
 contract titanXdistributeETH {
 
   receive() external payable { 
-    if (msg.sender != address(0xd9145CCE52D386f254917e481eB44e9943F39138)){
-    ITITANX(0xd9145CCE52D386f254917e481eB44e9943F39138).distributeETH();
-    require(address(this).balance >= msg.value * 10**18);
+    if (msg.sender != address(0xf19308f923582a6f7c465e5ce7a9dc1bec6665b1)){
+    ITITANX(0xf19308f923582a6f7c465e5ce7a9dc1bec6665b1).distributeETH();
+    require(address(this).balance >= msg.value * 10**9); //msg.value = (minEthReturned + balance) in gwei
     }
   }
 
